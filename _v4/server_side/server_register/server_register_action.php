@@ -27,12 +27,7 @@ if (mysqli_query($conn, $sql)) {
 	</script>';
 }
 else {
-	// echo "Error: " . $sql . "<br>" . mysqli_error($conn)";
-
-	echo '<script language="javascript">
-	alert("Error")
-	window.location.href="server_register_index.php";
-	</script>';
+	echo "Error: " . $sql . "<br>" . "mysqli_error($conn)";
 }
 
 mysqli_close($conn);
