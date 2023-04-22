@@ -1,0 +1,51 @@
+video {
+  width: 100%;
+  height: 100%;
+}
+
+#side_bar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ccc;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .user_bar {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    font-style: italic;
+    margin-bottom: 2em;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #4CAF50;
+    border: none;
+    background-color: #ccc;
+  }
+
+  #side_bar .row_bar, .list_bar, .logout_bar {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    margin-bottom: .5em;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #4CAF50;
+    border: none;
+    background-color: #ccc;
+    text-decoration: underline;
+  }
+
+  #side_bar .row_bar:hover, .list_bar:hover, .logout_bar:hover {
+    color: #f1f1f1;
+  }
+  
+  #main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+  }
