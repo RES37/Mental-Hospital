@@ -17,7 +17,7 @@
 </head>
 <body>
     <?php
-        include 'assets/php/nav_bar.php';
+        include 'assets/nav_bar.php';
     ?>
     <main>
         <section>
