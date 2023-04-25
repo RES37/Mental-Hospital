@@ -1,0 +1,60 @@
+video {
+  width: 100%;
+  height: 100%;
+}
+
+#side_bar {
+    height: 100%;
+    width: 10em;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ccc;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .user_bar {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    font-style: italic;
+    margin-bottom: 2em;
+    padding: 0.375em 0.5em 0.375em 1em;
+    text-decoration: none;
+    font-size: 1.125em;
+    color: #4CAF50;
+    border: none;
+    background-color: #ccc;
+  }
+
+  #side_bar .row_bar, .list_bar, .logout_bar {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    margin-bottom: .5em;
+    padding: 0.375em 0.5em 0.375em 1em;
+    text-decoration: none;
+    font-size: 1.125em;
+    color: #4CAF50;
+    border: none;
+    background-color: #ccc;
+    text-decoration: underline;
+  }
+
+  .list_bar {
+    animation: cssAnimation 0s 2s forwards;
+    visibility: hidden;
+  }
+
+  @keyframes cssAnimation {
+    to   { visibility: visible; }
+  }
+
+  #side_bar .row_bar:hover, .list_bar:hover, .logout_bar:hover {
+    color: #f1f1f1;
+  }
+  
+  #main {
+    margin-left: 10em; /* Same as the width of the sidenav */
+    padding: 0px 0.625em;
+  }
