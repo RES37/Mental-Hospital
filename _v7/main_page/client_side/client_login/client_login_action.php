@@ -16,6 +16,7 @@ if (!$conn) {
 $client_login_STRAND = $_POST['client_login_STRAND'];
 $client_login_USERNAME = $_POST['client_login_USERNAME'];
 $client_login_PASSWORD = $_POST['client_login_PASSWORD'];
+$hashed_password = password_hash($client_login_PASSWORD, PASSWORD_DEFAULT);
 
 // Checking if data input and data from database is the same
 $sql = "SELECT * FROM bvs_booths WHERE booth_strand = '$client_login_STRAND' AND booth_username = '$client_login_USERNAME'";
@@ -27,7 +28,6 @@ $result = mysqli_query($conn, $sql);
 if($result->num_rows > 0) {
 // Fetch result
 $row = mysqli_fetch_array($result);
-$hashed_password = password_hash($client_login_PASSWORD, PASSWORD_DEFAULT);
 	// If the password is 'null' then user input is the new password
 	if (is_null($row['booth_password'])) {
 		mysqli_query($conn, "UPDATE bvs_booths SET booth_password = '$client_login_PASSWORD' WHERE booth_strand = '$client_login_STRAND' AND booth_username = '$client_login_USERNAME' ANDbooth_password IS NULL");
