@@ -30,7 +30,7 @@ if($result->num_rows > 0) {
 $row = mysqli_fetch_array($result);
 	// If the password is 'null' then user input is the new password
 	if (is_null($row['booth_password'])) {
-		mysqli_query($conn, "UPDATE bvs_booths SET booth_password = '$client_login_PASSWORD' WHERE booth_strand = '$client_login_STRAND' AND booth_username = '$client_login_USERNAME' AND booth_password IS NULL");
+		mysqli_query($conn, "UPDATE bvs_booths SET booth_password = '$hashed_password' WHERE booth_strand = '$client_login_STRAND' AND booth_username = '$client_login_USERNAME' AND booth_password IS NULL");
 		
 		session_start();
 		$_SESSION["booth_id"] = $row['booth_id'];
