@@ -30,6 +30,7 @@ if ($result->num_rows > 0) {
 		$_SESSION["booth_id"] = $row['booth_id'];
 
 		header("Location: server_login_index.php");
+		exit();
 	}
 }
 else {
