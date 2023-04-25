@@ -29,6 +29,7 @@ if(isset($_POST['client_qr_USER_ID'])) {
       alert("Scan Success")
       window.location.href="client_qr_scanner_index.php";
       </script>';
+	    exit();
     }
   }
   catch(mysqli_sql_exception $e) {
