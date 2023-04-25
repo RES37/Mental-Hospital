@@ -31,6 +31,13 @@ $hashed_password = password_hash($client_login_PASSWORD, PASSWORD_DEFAULT);
 	// If the password is 'null' then user input is the new password
 	if (is_null($row['booth_password'])) {
 		mysqli_query($conn, "INSERT INTO bvs_booths(booth_password) VALUES('$hashed_password')");
+		
+		session_start();
+		$_SESSION["booth_id"] = $row['booth_id'];
+		$_SESSION["booth_strand"] = $row['booth_strand'];
+
+		header("Location: ../client_qr_scanner/client_qr_index.php");
+		exit();
 	}
 	//If the password inputs matched the hashed password in the database
 	else if (password_verify($client_login_PASSWORD, $hashed_password) {
