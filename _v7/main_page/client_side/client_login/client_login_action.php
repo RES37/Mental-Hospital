@@ -30,11 +30,11 @@ $row = mysqli_fetch_array($result);
 $hashed_password = password_hash($client_login_PASSWORD, PASSWORD_DEFAULT);
 	// If the password is 'null' then user input is the new password
 	if (is_null($row['booth_password'])) {
-		mysqli_query($conn, "INSERT INTO bvs_booths(booth_password) VALUES('$hashed_password')");
+		mysqli_query($conn, "UPDATE bvs_booths SET booth_password = '$client_login_PASSWORD' WHERE booth_strand = '$client_login_STRAND' AND booth_username = '$client_login_USERNAME' ANDbooth_password IS NULL");
 		
 		session_start();
 		$_SESSION["booth_id"] = $row['booth_id'];
-		$_SESSION["booth_strand"] = $row['booth_strand'];
+		$_SESSION["booth_username"] = $row['booth_username'];
 
 		header("Location: ../client_qr_scanner/client_qr_index.php");
 		exit();
@@ -44,7 +44,7 @@ $hashed_password = password_hash($client_login_PASSWORD, PASSWORD_DEFAULT);
 		//user exists, set session variables for booth id and strand
 		session_start();
 		$_SESSION["booth_id"] = $row['booth_id'];
-		$_SESSION["booth_strand"] = $row['booth_strand'];
+		$_SESSION["booth_username"] = $row['booth_username'];
 
 		header("Location: ../client_qr_scanner/client_qr_index.php");
 		exit();
