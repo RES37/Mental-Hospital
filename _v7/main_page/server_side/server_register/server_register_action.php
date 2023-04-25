@@ -26,6 +26,7 @@ try {
 		alert("Registration Successful")
 		window.location.href="../server_login/server_login_index.php";
 		</script>';
+		exit();
 	}
 }
 catch(mysqli_sql_exception $e) {
