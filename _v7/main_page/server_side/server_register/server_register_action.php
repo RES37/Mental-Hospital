@@ -14,12 +14,10 @@ if (!$conn) {
 
 //  Get the form data
 $server_register_STRAND = $_POST['server_register_STRAND'];
-$server_register_PASSWORD = $_POST['server_register_PASSWORD'];
-
-$hashed_password = password_hash($server_register_PASSWORD, PASSWORD_DEFAULT);
+$server_register_USERNAME = $_POST['server_register_USERNAME'];
 
 // Insert the data into the database
-$sql = "INSERT INTO bvs_booths (booth_strand, booth_password) VALUES('$server_register_STRAND', '$hashed_password')";
+$sql = "INSERT INTO bvs_booths (booth_strand, booth_username) VALUES('$server_register_STRAND', '$server_register_USERNAME')";
 
 try {
 	if (mysqli_query($conn, $sql)) {
