@@ -18,5 +18,6 @@ $result = mysqli_query($conn, $sql);
 $data = array();
 while($row = mysqli_fetch_array($result)) {
     $data[] = $row;
+    exit();
 }
 ?>
