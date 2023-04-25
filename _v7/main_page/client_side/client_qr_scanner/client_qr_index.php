@@ -18,7 +18,7 @@
 
       session_start();
 
-      if(isset($_SESSION['booth_id']) || isset($_SESSION['booth_strand'])) {
+      if(isset($_SESSION['booth_id']) || isset($_SESSION['booth_username'])) {
         include 'client_qr_index_features.php';
       }
       else {
