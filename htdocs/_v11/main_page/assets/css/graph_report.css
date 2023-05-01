@@ -1,0 +1,17 @@
+.margin, .margin-border {
+    border: 0.1em solid black;
+}
+
+.margin-border {
+    margin-top: .5em;
+}
+
+#pie_chart {
+    width: 100% ;
+    height: 200px;
+}
+
+#bar_chart {
+    width: 100%;
+    height: 100px;
+}
