@@ -1,0 +1,118 @@
+/* #container {
+    margin: 8.125em auto;
+    background-color: #fff;
+    border: 0.0625em solid #ccc;
+    padding: 1.25em;
+    text-align: center;
+}
+@media all and (max-width: 480px) {
+    #container {
+        width: 80vw;
+    }
+}
+@media all and (min-width: 1024px) {
+    #container {
+        width: 31.25em
+    }
+} */
+
+
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #ccc;
+    max-width: 480px;
+    min-width: 1024px;
+    width: 80vw
+}
+
+/* TOP */
+.topnav {
+    position: fixed;
+    height: 4.5em;
+    top: 0em;
+    right: 0em;
+    bottom: 0em;
+    left: 0em;
+    overflow: hidden;
+    background-color: #111111;
+}
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.topnav a.split1 {
+    float: left;
+    background: hsla(266, 100%, 54%, 1);
+    background: linear-gradient(180deg, hsla(266, 100%, 54%, 1) 1%, hsla(297, 56%, 50%, 1) 50%, hsla(0, 97%, 54%, 1) 100%);
+    background: -moz-linear-gradient(180deg, hsla(266, 100%, 54%, 1) 1%, hsla(297, 56%, 50%, 1) 50%, hsla(0, 97%, 54%, 1) 100%);
+    background: -webkit-linear-gradient(180deg, hsla(266, 100%, 54%, 1) 1%, hsla(297, 56%, 50%, 1) 50%, hsla(0, 97%, 54%, 1) 100%);
+    color: white;
+    font-weight: bolder;
+}
+/* .topnav a.split2 {
+    float: right;
+    background: hsla(266, 100%, 54%, 1);
+    background: linear-gradient(180deg, hsla(266, 100%, 54%, 1) 1%, hsla(297, 56%, 50%, 1) 50%, hsla(0, 97%, 54%, 1) 100%);
+    background: -moz-linear-gradient(180deg, hsla(266, 100%, 54%, 1) 1%, hsla(297, 56%, 50%, 1) 50%, hsla(0, 97%, 54%, 1) 100%);
+    background: -webkit-linear-gradient(180deg, hsla(266, 100%, 54%, 1) 1%, hsla(297, 56%, 50%, 1) 50%, hsla(0, 97%, 54%, 1) 100%);
+    color: white;
+} */
+
+/* MIDDLE */
+main {
+    background-image: url("../img/pexelsimage.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 4.5em;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0em;
+    right: 0em;
+    bottom: 0em;
+    left: 0em;
+    z-index: -1;
+    color: white;
+}
+.title {
+    margin-top: 1.75em;
+    margin-left: 2em;
+    font-size: 3.05vw;
+    width: 12em;
+    font-weight: bold;
+}
+.description {
+    margin-top: 0.3em;
+    margin-left: 4.75em;
+    font-size: 1.35vw;
+    width: 36vw;
+}
+.button {
+    background-color: white;
+    border: 0.25em solid white;
+    border-radius: 0.45em;
+    margin-top: 0.45em;
+    margin-left: 3em;
+    font-size: 2.05vw;
+    font-weight: bolder;
+    width: 9.95vw;
+    color: #111111;
+    text-align: center;
+}
+.button a {
+    text-decoration: none;
+    color: inherit;
+}
+.button a:hover {
+    color: grey;
+}
